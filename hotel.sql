@@ -46,7 +46,7 @@ create table
     `nombre`varchar(200) not null,
     `apellido`varchar(200) not null,
     `direccion`varchar(200) not null,
-    primary key(`id_registro`),
+    primary key(`id_registro`)
     constraint `FK_cliente_registro` foreign key(`id_cliente`)
     references `cliente`(`id_cliente`)
     constraint `FK_pago_registro` foreign key(`id_pago`)
