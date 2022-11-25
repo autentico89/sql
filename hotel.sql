@@ -36,4 +36,25 @@ create table
     primary key(`id_habitacion`)
 )
 
+create table
+`registro`(
+    `id_registro`integer auto_increment not null,
+    `id_cliente`integer not null,
+    `id_pago`integer not null,
+    `id_habitacion`integer not null,
+    `id_reserva`integer not null,
+    `nombre`varchar(200) not null,
+    `apellido`varchar(200) not null,
+    `direccion`varchar(200) not null,
+    primary key(`id_registro`),
+    constraint `FK_cliente_registro` foreign key(`id_cliente`)
+    references `cliente`(`id_cliente`)
+    constraint `FK_pago_registro` foreign key(`id_pago`)
+    references `pago`(`id_pago`)
+    constraint `FK_habitacion_registro` foreign key(`id_habitacion`)
+    references `habitacion`(`id_habitacion`)
+    constraint `FK_reserva_registro` foreign key(`id_reserva`)
+    references `reserva`(`id_reserva`)
 
+    
+)
