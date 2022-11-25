@@ -46,13 +46,13 @@ create table
     `nombre`varchar(200) not null,
     `apellido`varchar(200) not null,
     `direccion`varchar(200) not null,
-    primary key(`id_registro`)
+    primary key(`id_registro`),
     constraint `FK_cliente_registro` foreign key(`id_cliente`)
-    references `cliente`(`id_cliente`)
+    references `cliente`(`id_cliente`),
     constraint `FK_pago_registro` foreign key(`id_pago`)
-    references `pago`(`id_pago`)
+    references `pago`(`id_pago`),
     constraint `FK_habitacion_registro` foreign key(`id_habitacion`)
-    references `habitacion`(`id_habitacion`)
+    references `habitacion`(`id_habitacion`),
     constraint `FK_reserva_registro` foreign key(`id_reserva`)
     references `reserva`(`id_reserva`)
 )
