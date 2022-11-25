@@ -27,4 +27,13 @@ create table
     primary key(`id_cliente`)
 )
 
+create table
+`habitacion`(
+    `id_habitacion`integer auto_increment not null,
+    `tipo_de_habitacion`text null,
+    `numero_de_habitacion`integer not null,
+    `precio`integer not null,
+    primary key(`id_habitacion`)
+)
+
 
