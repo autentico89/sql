@@ -55,6 +55,31 @@ create table
     references `habitacion`(`id_habitacion`)
     constraint `FK_reserva_registro` foreign key(`id_reserva`)
     references `reserva`(`id_reserva`)
-
-    
 )
+
+    create table
+    `usuario`(
+        `id_usuario`integer auto_increment not null,
+        `id_registro`integer not null,
+        `correo`varchar(200) not null,
+        `contraseña`integer not null,
+        primary key(`id_usuario`)
+    )
+
+    create table
+    `g_fotos`(
+        `id_fotos`integer auto_increment not null,
+        `id_registro`integer not null,
+        `galeria_fotos`varchar(200) not null,
+        primary key(`id_fotos`)
+    )
+
+    create table
+`oferta`(
+    `id_oferta`integer auto_increment not null,
+    `id_registro`integer not null,
+    `f_inicio` datetime not null,
+    `f_termino` datetime not null,
+    primary key(`id_oferta`)
+);
+
