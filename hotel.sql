@@ -10,3 +10,10 @@ create table
     primary key(`id_reserva`)
 );
 
+create table
+`pago`(
+    `id_pago`integer auto_increment not null,
+    `tipo_de_pago`varchar(200) not null,
+    `fecha`datetime not null,
+    primary key(`id_pago`)
+)
