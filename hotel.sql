@@ -17,3 +17,14 @@ create table
     `fecha`datetime not null,
     primary key(`id_pago`)
 )
+
+create table
+`cliente`(
+    `id_cliente`integer auto_increment not null,
+    `nombre`varchar(200) not null,
+    `apellido`varchar(200) not null,
+    `direccion`varchar(200) not null,
+    primary key(`id_cliente`)
+)
+
+
