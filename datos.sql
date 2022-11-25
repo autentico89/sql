@@ -1,4 +1,4 @@
-create database
+                     create database
 base_de_datos_juegos;
 
 create table
