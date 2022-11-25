@@ -75,7 +75,7 @@ create table
     )
 
     create table
-`oferta`(
+    `oferta`(
     `id_oferta`integer auto_increment not null,
     `id_registro`integer not null,
     `f_inicio` datetime not null,
